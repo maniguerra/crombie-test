@@ -41,8 +41,9 @@ export default {
 
 <style lang="scss" scoped>
 .search {
-  max-width: 400px;
   padding-top: 10px;
+  max-width: fit-content;
+  margin-left: 10px;
 }
 .help-text-search {
   font-size: 12px;
@@ -61,6 +62,7 @@ export default {
     max-width: 100vw;
     padding-top: 4px;
     min-height: 60px;
+    margin-right:0px;
   }
 }
 </style>
