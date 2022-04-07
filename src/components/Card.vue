@@ -6,8 +6,8 @@
           <strong>{{ character.name }} </strong>
         </li>
 
-        <li class="list-item">Species: {{ character.species }}</li>
-        <li class="list-item">Origin: {{ character.origin.name }}</li>
+        <li class="list-item">Especie: {{ character.species }}</li>
+        <li class="list-item">Origen: {{ character.origin.name }}</li>
       </ul>
       <button @click="openModal">Ver Más</button>
     </div>
