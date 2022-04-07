@@ -6,11 +6,11 @@
         <ul>
           <li><strong>ID:</strong> #{{ character.id }}</li>
           <li><strong>Name: </strong>{{ character.name }}</li>
-          <li><strong>Satus:</strong>{{ character.status }}</li>
+          <li><strong>Satus: </strong>{{ character.status }}</li>
           <li><strong>Species: </strong>{{ character.species }}</li>
           <li><strong>Gender: </strong>{{ character.gender }}</li>
           <li><strong>Origin: </strong>{{ character.origin.name }}</li>
-          <li><strong>Location:</strong>{{ character.location.name }}</li>
+          <li><strong>Location: </strong>{{ character.location.name }}</li>
         </ul>
       </div>
       <div class="col-img">
