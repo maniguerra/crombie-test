@@ -5,12 +5,12 @@
       <div class="col-info">
         <ul>
           <li><strong>ID:</strong> #{{ character.id }}</li>
-          <li><strong>Nombre: </strong>{{ character.name }}</li>
-          <li><strong>Estado:</strong>{{ character.status }}</li>
-          <li><strong>Especie: </strong>{{ character.species }}</li>
-          <li><strong>Género: </strong>{{ character.gender }}</li>
-          <li><strong>Origen: </strong>{{ character.origin.name }}</li>
-          <li><strong>Locación:</strong>{{ character.location.name }}</li>
+          <li><strong>Name: </strong>{{ character.name }}</li>
+          <li><strong>Satus:</strong>{{ character.status }}</li>
+          <li><strong>Species: </strong>{{ character.species }}</li>
+          <li><strong>Gender: </strong>{{ character.gender }}</li>
+          <li><strong>Origin: </strong>{{ character.origin.name }}</li>
+          <li><strong>Location:</strong>{{ character.location.name }}</li>
         </ul>
       </div>
       <div class="col-img">

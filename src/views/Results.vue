@@ -1,15 +1,15 @@
 <template>
   <div>
     <div class="back-button-container">
-      <button class="back-button" @click="goBack">&leftarrow; Volver</button>
+      <button class="back-button" @click="goBack">&leftarrow; Go back</button>
     </div>
     <hr />
     <div v-if="filteredInfo.count > 0">
-      <h3>Resultados de búsqeda</h3>
+      <h3>Search results</h3>
       <span>
-        Mostrando {{ filteredList.length }} personajes que contienen "{{
+        Showing {{ filteredList.length }} characters that have "{{
           route.query.name
-        }}" en su nombre, de un total de {{ filteredInfo.count }}
+        }}" in their name, of a total of {{ filteredInfo.count }}
       </span>
       <div class="character-card-container">
         <Card
@@ -18,12 +18,12 @@
           :character="item"
         />
       </div>
-      <button class="load-more-button" v-if="filteredInfo.next" @click="loadMore">Cargar más</button>
+      <button class="load-more-button" v-if="filteredInfo.next" @click="loadMore">Load more</button>
       <CharacterModal v-if="modal" />
     </div>
     <div v-else>
       <h3>
-        No se han encontrado resultados para la búsqueda de "{{
+       No results found for your search "{{
           route.query.name
         }}"
       </h3>

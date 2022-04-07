@@ -2,14 +2,14 @@
   <div class="home">
     <Filter />
     <hr />
-    <h3>Lista de personajes</h3>
+    <h3>Characters list</h3>
     <span>
-      Mostrando {{ list.length }} personajes de un total de {{ info.count }}
+      Showing {{ list.length }} characters of a total of {{ info.count }}
     </span>
     <div class="character-card-container">
       <Card v-for="(item, index) in list" :key="index" :character="item" />
     </div>
-    <button class="load-more-button" @click="loadMore">Cargar más</button>
+    <button class="load-more-button" @click="loadMore">Load more</button>
     <CharacterModal v-if="modal" />
   </div>
 </template>

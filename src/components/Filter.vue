@@ -1,6 +1,6 @@
 <template>
   <div class="search">
-    <span class="help-text-search">Nombre de personaje</span>
+    <span class="help-text-search">Character name</span>
     <input
       @keyup.enter="search"
       class="input-search"
@@ -9,7 +9,7 @@
       v-model="query"
     />
     <button class="button-search" @click="search" :disabled="disabled">
-      Buscar
+      Search
     </button>
   </div>
 </template>
