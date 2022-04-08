@@ -18,15 +18,17 @@
           :character="item"
         />
       </div>
-      <button class="load-more-button" v-if="filteredInfo.next" @click="loadMore">Load more</button>
+      <button
+        class="load-more-button"
+        v-if="filteredInfo.next"
+        @click="loadMore"
+      >
+        Load more
+      </button>
       <CharacterModal v-if="modal" />
     </div>
     <div v-else>
-      <h3>
-       No results found for your search "{{
-          route.query.name
-        }}"
-      </h3>
+      <h3>No results found for your search "{{ route.query.name }}"</h3>
     </div>
   </div>
 </template>
@@ -54,18 +56,28 @@ export default {
 
     const getFilteredList = () => {
       let url = `https://rickandmortyapi.com/api/character/?name=${route.query.name}`;
-      axios.get(url).then((response) => {
-        filteredList.value = response.data.results;
-        filteredInfo.value = response.data.info;
-      });
+      axios
+        .get(url)
+        .then((response) => {
+          filteredList.value = response.data.results;
+          filteredInfo.value = response.data.info;
+        })
+        .catch((err) => {
+          console.log("Error: ", err);
+        });
     };
 
     const loadMore = () => {
       let url = filteredInfo.value.next;
-      axios.get(url).then((response) => {
-        filteredList.value = filteredList.value.concat(response.data.results);
-        filteredInfo.value = response.data.info;
-      });
+      axios
+        .get(url)
+        .then((response) => {
+          filteredList.value = filteredList.value.concat(response.data.results);
+          filteredInfo.value = response.data.info;
+        })
+        .catch((err) => {
+          console.log("Error: ", err);
+        });
     };
 
     const goBack = () => {
@@ -99,8 +111,6 @@ export default {
   top: 10px;
 }
 
-
-
 @media screen and (max-width: 640px) {
   .back-button-container {
     height: 60px;
@@ -108,7 +118,7 @@ export default {
 
   .back-button {
     position: absolute;
-    top:5px;
+    top: 5px;
     left: 0;
     right: 0;
     width: 80px;

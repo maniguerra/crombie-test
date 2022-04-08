@@ -33,18 +33,28 @@ export default {
 
     const getList = () => {
       let url = "https://rickandmortyapi.com/api/character";
-      axios.get(url).then((response) => {
-        list.value = response.data.results;
-        info.value = response.data.info;
-      });
+      axios
+        .get(url)
+        .then((response) => {
+          list.value = response.data.results;
+          info.value = response.data.info;
+        })
+        .catch((err) => {
+          console.log("Error: ", err);
+        });
     };
 
     const loadMore = () => {
       let url = info.value.next;
-      axios.get(url).then((response) => {
-        list.value = list.value.concat(response.data.results);
-        info.value = response.data.info;
-      });
+      axios
+        .get(url)
+        .then((response) => {
+          list.value = list.value.concat(response.data.results);
+          info.value = response.data.info;
+        })
+        .catch((err) => {
+          console.log("Error: ", err);
+        });
     };
 
     onMounted(() => {
