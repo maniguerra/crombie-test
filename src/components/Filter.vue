@@ -4,7 +4,6 @@
     <input
       @keyup.enter="search"
       class="input-search"
-      label="Nombre del personaje"
       type="text"
       v-model="query"
     />
