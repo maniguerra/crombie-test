@@ -95,4 +95,13 @@ button:hover {
   margin-bottom: 2rem;
   margin-top: 1rem;
 }
+
+.toggle-container.toggle-button:focus{
+  box-shadow:none;
+}
+
+.toggle.toggle-on{
+  background:none;
+  border-color:#fff;
+}
 </style>
