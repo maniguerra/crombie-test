@@ -105,7 +105,19 @@ export default {
 
 @media screen and (max-width: 640px) {
   .character-modal-box {
-    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+
+  .character-modal-box > .col-img,
+  .character-modal-box > .col-img > img {
+    width: 100%;
+  }
+
+  .character-modal-box > .col-info {
+    width: 100%;
+    width: -moz-available; /* WebKit-based browsers will ignore this. */
+    width: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+    width: fill-available;
   }
 }
 </style>
