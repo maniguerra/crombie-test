@@ -121,7 +121,7 @@ export default {
     top: 5px;
     left: 0;
     right: 0;
-    width: 80px;
+    width: 85px;
     margin: auto;
   }
 }
